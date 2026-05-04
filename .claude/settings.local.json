@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rscript scripts/01_data_inspection.R)",
+      "PowerShell(Rscript scripts/01_data_inspection.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/01_data_inspection.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02_label_search.R 2>&1)",
+      "PowerShell(Import-Csv \"output/profile_a5_vars.csv\" | Where-Object { $_.variable -match \"^kpa5_2[01]\\\\d\\\\d$\" } | Format-Table -AutoSize)",
+      "PowerShell(Import-Csv \"output/profile_a5_vars.csv\" | Where-Object { $_.label -match \"geburt|jahrgang|geburts|birth|born|geb\\\\.\" -or $_.variable -match \"gebj|gebjahr|_geb\" } | Format-Table -AutoSize)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02b_demo_values.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02c_therm_labels.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02d_221_check.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02e_verify_policy_vars.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/03_data_merge.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02f_vote_intention_check.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02g_vote_ab_compare.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/04_supplemental_demo_check.R 2>&1)"
+    ]
+  }
+}
