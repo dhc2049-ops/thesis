@@ -47,6 +47,8 @@ coalesce_pid <- function(a, b) {
 process_wave <- function(df, wave_num) {
   w  <- as.character(wave_num)
   gv <- function(suffix) recode_na(get_var(df, paste0("kp", w, "_", suffix)))
+  # Thermometer stored as 1-11; convert to conceptual -5 to +5
+  therm <- function(suffix) gv(suffix) - 6L
 
   # _190ba = simplified party list; _190bb = extended list (minor parties).
   # Both are shown to all respondents; they differ only when _190ba = 801 (andere).
@@ -57,14 +59,14 @@ process_wave <- function(df, wave_num) {
     lfdn             = as.numeric(df$lfdn),
     wave             = wave_num,
     vote_intention   = dplyr::coalesce(vote_a, vote_b),
-    afd_therm        = gv("430i"),
-    cdu_therm        = gv("430a"),
-    csu_therm        = gv("430b"),
-    spd_therm        = gv("430c"),
-    fdp_therm        = gv("430d"),
-    gru_therm        = gv("430e"),
-    lin_therm        = gv("430f"),
-    bsw_therm        = gv("430m"),
+    afd_therm        = therm("430i"),
+    cdu_therm        = therm("430a"),
+    csu_therm        = therm("430b"),
+    spd_therm        = therm("430c"),
+    fdp_therm        = therm("430d"),
+    gru_therm        = therm("430e"),
+    lin_therm        = therm("430f"),
+    bsw_therm        = therm("430m"),
     lr_self          = gv("1500"),      # rotating — only waves 28, 30, 33
     redist           = gv("1090"),
     immigration      = gv("1130"),
