@@ -16,7 +16,8 @@
       "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/02g_vote_ab_compare.R 2>&1)",
       "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/04_supplemental_demo_check.R 2>&1)",
       "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/05_employment_income_search.R 2>&1)",
-      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/03_descriptive.R 2>&1)"
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/03_descriptive.R 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.3.2\\\\bin\\\\Rscript.exe\" scripts/04_reactive_voter.R 2>&1)"
     ]
   }
 }
